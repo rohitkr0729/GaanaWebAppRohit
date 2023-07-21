@@ -1,0 +1,14 @@
+
+.fa-twitter
+{
+	font-size: 17px;
+	border: solid : #00acee;
+    border-radius: 40px;
+    padding: 13px;
+    background-color: #00acee;
+}
+
+.list-group a li:hover
+{
+    color: #c2c4c3;
+}

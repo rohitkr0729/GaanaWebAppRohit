@@ -1,0 +1,30 @@
+.fa-twitter
+{
+	font-size: 17px;
+	border: solid : #00acee;
+  border-radius: 40px;
+  padding: 13px;
+  background-color: #00acee;
+}
+
+
+.login
+{
+    position: fixed;
+    top: 0px;
+    height: 745px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+.login1
+{
+    position: fixed;
+    top: 100px;
+    margin-left: 379px;
+    background-color: white;
+    height: 530px;
+    border-radius: 5px;
+
+    
+}

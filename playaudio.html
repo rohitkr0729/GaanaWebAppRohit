@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/playaudio.css">
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+     <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: whitesmoke;">
+  <div class="container">
+	<nav class="navbar fixed-top" style=" background-color: #f5f5f5;">
+  <div class="container-fluid  " style=" margin-left: 2.7%;font-size: 18px; height: 50px;">
+    
+    <i class="fa fa-bars"  aria-hidden="true" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" style="cursor: pointer;margin-left: -5px; ">
+      
+    </i>
+    <!---Drop down of menu---->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h6 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="#" style="text-decoration:none; color:black;"><i class="fa-regular fa-user" style="border:solid 2px;border-radius: 30px;padding: 4px;margin-left: 17px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;Login / Sign up</a></h6>
+      </div>
+      <!---below content start--->
+      <div class="offcanvas-body">
+        <ul class="list-inline" style=" font-size: 14px; font-weight:550">
+          <a href="index.html" style=" text-decoration: none;color: black;"><li class="p-3">Home</li></a>
+          <a href="radio.html" style=" text-decoration:none; color: black;"><li class="p-3">Radio</li></a>
+          <a href="Podcast.html" style=" text-decoration:none; color: black;"><li class="p-3">Podcast</li></a>
+          <a href="mymusic.html" style=" text-decoration:none; color: black;"><li class="p-3">My Music</li></a>
+          <a href="#" style=" text-decoration:none; color: black;"><li class="p-3">India's Music</li></a>
+          <a href="#" style=" text-decoration:none; color: black;"><div class="p-3">Language<br> <span>(set Music Language)</span></div></a><br><br><br>
+          <a href="#" style=" text-decoration:none; color: black;"><div class="p-3" style=" margin-top: -60px;">Night Mode</div>
+            <div style="margin-top:-42px;margin-left: 299px;">
+              <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style="font-size:20px; color: black;">
+            </div>
+            </div></a><hr>
+
+          <div class="p-3" style="margin-top:-20px;"><b style="font-size: 19px;font-weight: 600;">Go Premium</b></div>
+          <a href="logingdf.html" style=" text-decoration:none; color: black;"><li class="p-3" >Go Ad-Free</li></a>
+          <a href="ggp.html" style=" text-decoration:none; color: black;"><li class="p-3">Get Gaana Plus</li></a>
+          <hr>
+          <div class="p-3" style="margin-top:-20px;"><b style="font-size: 19px;font-weight: 600;">Quick Access</b></div>
+          <a href="" style=" text-decoration:none; color: black;"><li class="p-3 text-danger">Trending Songs</li></a>
+          <a href="newsong.html" style=" text-decoration:none; color: black;"><li class="p-3">New Songs</li></a>
+           <a href="oldsong.html" style=" text-decoration:none; color: black;"><li class="p-3">Old Songs</li></a>
+            <a href="album.html" style=" text-decoration:none; color: black;"><li class="p-3">Album</li></a>
+             <a href="#" style=" text-decoration:none; color: black;"><li class="p-3">Artist</li></a>
+              <a href="#" style=" text-decoration:none; color: black;"><li class="p-3">Lyrics</li></a>
+               <a href="#" style=" text-decoration:none; color: black;"><li class="p-3">Music Labels</li></a>
+                <a href="#" style=" text-decoration:none; color: black;"><li class="p-3">Genres</li></a>
+        </ul>
+     </div>
+    </div>
+
+    <div style="margin-right: 90.7%; margin-top: -10px;">
+
+    <a href="index.html"><img src="image/logoganna.png" style="height: 26px;"></a>
+
+     <span class="search">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-magnifying-glass" style=" color:gray; font-size: 12px;margin-top: 14px">&nbsp;&nbsp;</i><input type="search"  placeholder="Search Artists, Songs, Albums">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <button class="btn border border-danger" id="goadfree"><a href="logingdf.html" style=" text-decoration:none; color: red;">&nbsp;&nbsp;Go&nbsp;Ad&nbsp;Free&nbsp;&nbsp;</a></button>
+     <button class="btn border border-danger" id="getgaana"><a href="ggp.html" style=" text-decoration:none; color: red;">&nbsp;&nbsp;&nbsp;Get&nbsp;Gaana&nbsp;Plus&nbsp;&nbsp;&nbsp;</a></button>
+     <button class="btn btn-sm bg-danger" id="new">NEW</button>
+    
+       <div id="language"><a href="#"><img src="image/alang.png" style="height:26px;"></a>
+       <div id="moon"><a href=""><img src="image/moon.png" style="height:25px;"></a></div>
+       <div id="login"><button class="btn" style="font-size: 12px; color: black;font-family: sans-serif;"><a href="#" style="text-decoration:none; color:black;">Log&nbsp;In&nbsp;/&nbsp;sign&nbsp;Up</a></button></div>
+       </div>
+     </span>  
+    </div>  
+ 
+
+<!--nav bar second coding below--->
+
+<div class="container-fluid fixed-top" id="menu">
+
+<nav class="navbar navbar-expand-lg bg-white">
+ 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" style=" font-size: 16px;">
+         <li class="nav-item" style="margin-left:35px;">
+          <a class="nav-link text-dark" href="index.html" >All</a>
+        </li>
+        <li class="nav-item" style="margin-left:20px;">
+          <a class="nav-link text-dark" href="trandingsong.html" id="active">Tranding Songs</a>
+        </li>
+        <li class="nav-item" style="margin-left:13px;">
+          <a class="nav-link text-dark" href="newsong.html" >New Songs</a>
+        </li>
+        <li class="nav-item" style="margin-left:16px;">
+          <a class="nav-link text-dark" href="oldsong.html">Old Songs</a>
+        </li>
+        <div class="menu-bar-1">
+            <ul>
+                <li class="nav-item"><a class="nav-link" href="" style=" text-decoration: none;color: black;">Moods&nbsp;&&nbsp;Genres<div style=" margin-top: -23px; margin-left: 125px;"><i class="fa fa-angle-down" aria-hidden="true"></i></div></a>
+                <div class="sub_menu-2">
+                    <ul>
+                        <li class="raaz"><a href="#"><p style=" padding: 5px; margin-left: -32px; font-weight: 500;font-size: 15px;">&nbsp;&nbsp;Party</p></a></li>
+                        <li><a href="#"><p style=" padding: 5px; margin-left: -32px;font-weight: 500;font-size: 15px;">&nbsp;&nbsp;Romance</p></a></li>
+                        <li><a href="#"><p style=" padding: 5px; margin-left: -32px;font-weight: 500;font-size: 15px;">&nbsp;&nbsp;90s & 2000s</p></a></li>
+                        <li><a href="#"><p style=" padding: 5px; margin-left: -32px;font-weight: 500;font-size: 15px;">&nbsp;&nbsp;Retro</p></a></li>
+                        <li><a href="#"><p style=" padding: 5px; margin-left: -32px;font-weight: 500;font-size: 15px;">&nbsp;&nbsp;Indie</p></a></li>
+                        <li><a href="#"><p style=" padding: 5px; margin-left: -32px;font-weight: 500;font-size: 15px;">&nbsp;&nbsp;Bhakti</p></a></li>
+                        <li><a href="#"><p style=" padding: 5px; margin-left: -32px;font-weight: 500;font-size: 15px;">&nbsp;&nbsp;EDM</p></a></li>
+                        <li><a href="#"><p style=" padding: 5px; margin-left: -32px;font-weight: 500;font-size: 15px;">&nbsp;&nbsp;Ghazals</p></a></li>
+                    </ul>
+                    
+
+                </div>
+        </li>
+      </ul>
+    </div>
+
+     <li class="nav-item" style="margin-left:11px;">
+          <a class="nav-link text-dark" href="album.html">Album</a>
+        </li>
+       <li class="nav-item" style="margin-left:13px;">
+          <a class="nav-link text-dark" href="radio.html">Radio</a>
+        </li>
+         <li class="nav-item" style="margin-left:13px;">
+          <a class="nav-link text-dark" href="Podcast.html">Podcast</a>
+        </li>
+         <li class="nav-item" style="margin-left:13px;">
+          <a class="nav-link text-dark" href="mymusic.html">My Music</a>
+        </li>
+    
+  </ul>
+</nav>
+</div>
+<!--footer part---->
+<div class="container-fluid  fixed-top" style="margin-top: 684.9px; margin-left:-12px; width: 1557px;box-shadow: 2px 2px 10px #999;">
+<nav class="navbar bg-white">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="image/pine.png" style="height:40px; border-radius: 5px;margin-left: -100px;">
+      <button class="btn btn-sm bg-danger" id="primium">Primium</button>&nbsp;<span style="font-size: 14px;font-weight: 600;">Muje pine do</span>
+      <i class="fa-regular fa-heart" style="font-size: 17px; margin-left:125px;"></i>
+      <i class="fa-solid fa-ellipsis-vertical" style="font-size: 17px; margin-left:17px;"></i>
+      <button class="btn border-dark btn-sm" style=" border-radius: 30px; font-size:11px;border-color: black;margin-left: 200px;">&nbsp;&nbsp;00:00 / 00:00&nbsp;&nbsp;</button>
+      <i class="fa fa-retweet" aria-hidden="true" style=" font-size: 19px; margin-left:24px;"></i>
+      <i class="fa fa-step-backward" aria-hidden="true" style="margin-left: 26px;"></i>
+      <i class="fa-solid fa-play" style="color: white; margin-left: 37.5px;font-size: 16px;"></i>
+      <i class="fa fa-step-forward" aria-hidden="true" style=" margin-left:33px;"></i>
+      <i class="fa-solid fa-shuffle" style=" margin-left: 30px;font-size: 19px;"></i>
+      <i class="fa fa-volume-up" aria-hidden="true" style="border: solid gray 1px;padding: 5px;border-radius: 30px;font-size: 14px;margin-left: 217px;"></i>
+       <button class="btn border-danger btn-sm" style=" border-radius: 30px; font-size:11px;border-color: black;margin-left: 10px;font-weight: 500;">&nbsp;&nbsp;Audio:High&nbsp;&nbsp;</button>
+
+       <span style=" font-size: 12px;margin-left: 19px;color: gray;font-weight: 450;position: absolute;top: 17px;">Up Next</span>
+       <button class="btn btn-sm bg-danger" id="primium1">Primium</button>
+       <p style="position: absolute;top: 34px;margin-left: 1250px;font-size: 12px;"><b>Boom padi</b>| |...</p>
+       <i class="fa fa-chevron-up" aria-hidden="true" style=" margin-left: 192px;font-size: 14px;"></i>
+
+
+      <p style="margin-top: -14px;font-size: 12px;margin-left: -50px; color: gray;">Judaiyaan</p>
+      <div style="margin-top: -56.5px;background-color: red;width: 30px;margin-left: 689px;border-radius: 40px;color: red;" >'.</div>
+    </a>
+  </div>
+</nav>
+</div>
+
+</nav>
+</div>
+          <!--dropdown end--#fafafb;--->
+
+
+           <div style="position: fixed;margin-left: 82.5%;top: 130px; font-weight: 600;color: gray;">Sponsored</div>
+        <div style="position: fixed;margin-left: 83%;top: 160px;margin-right: 2%; ">
+
+  <div class="row">
+      <img src="image/gaana3.gif" class="img-fluid rounded img-thumbnail" alt="...">
+      
+    </div>
+  
+  </div>
+
+
+          <!---body part start--->
+      <div class="container bg-white" style="margin-top: 126px; margin-left:4px; width: 1220px;height: 600px;"><br>
+        <br><br><br><br>
+
+      <p style="font-size: 11px; font-weight:500;margin-left: 2.5%;">Gaana > <u>Trending Songs</u></p>
+
+         <div class=" mb-5" style="max-width: 560px; margin-left:2.5%;">
+  <div class="row g-0">
+    <div class="col-md-7">
+      <img src="image/brah.png" style=" height: 300px;border-radius: 5px;" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-4" >
+      <div class="card-body" style=" margin-top: 90px;">
+        <h2 class="card-title"><b style="font-weight:650;">Trending&nbsp;Songs</b></h2>
+        <p style="margin-top: 30px;color: gray;font-size: 14px;font-weight: 500;">Top&nbsp;trending&nbsp;hits,&nbsp;refreshed&nbsp;daily</p>
+        <p style="margin-top: -9px;color: gray;font-size: 14px;font-weight: 500;">Created by Gaana</p>
+        <p style="margin-top: -9px;color: gray;font-size: 14px;font-weight: 500;">12 Tracks</p>
+        <div style=" margin-top: -5px;"></div><audio src="F:\My Projects\Front End project\ganna app\Audio\Kesariya - Brahmastra.mp3" controls autoplay></audio></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+      
+      
+      <br>
+      <br>
+           <!---body part end--->
+    
+      <!---start footer part --->
+        <div class="footer bg-light" style=" width: 1224px; margin-top: -122px;">
+          <div class="container-fluid m-5"><br><br>
+        <p style="text-align: center;font-size: 32px;font-weight: 700;">Bas Bajna Chahiye Gaana</p>
+        <p style=" text-align: center; font-size: 12px; color: #8e8e93;">Gaana is the one-stop solution for all your music needs. Gaana offers you free, unlimited access to over 30<br> million Hindi Songs, Bollywood Music, English MP3 songs, Regional Music & Mirchi Play.</p>
+        <hr style=" width: 93%;color: gray;">
+
+        <div style=" margin-left: 605px;"><i class="fa-brands fa-twitter" style=" color: white;"></i>&nbsp;&nbsp;
+          <div style="margin-top:-45px; margin-left: -70px;"><img src="image/facebok.png" style="height:45px;"></div>
+        </div>
+
+        <hr style=" width: 93%;color: gray;">
+        <p style="font-size: 12px;text-align: center;">Advertise on Gaana.com&nbsp;&nbsp;&nbsp;&nbsp; Terms of Use&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Privacy Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Partners&nbsp;&nbsp; Sitemap&nbsp;&nbsp; FAQ</p>
+        <hr style=" width: 93%;color: gray;">
+        <p style=" font-size: 18px; text-align: center;font-weight: 500;">Quicklinks</p>
+
+    <!---Grid 1--->
+        <div class="container ">
+  <div class="row">
+    <div class="col">
+      <p style=" font-size: 14px; font-weight:480;">Albums</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>English</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Hindi</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Telugu</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Punjabi</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Tamil</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Kannada</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Bhojpuri</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Malayalam</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Marathi</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Bengali</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Gujarati Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Haryanvi</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+       
+      </ul>
+
+    </div>
+    <div class="col">
+      
+       <p style=" font-size: 14px; font-weight:480;">Genres</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>Bollywood Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Devotional Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Ghazals</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Bhajan</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Patriotic Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Kids Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Rock Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Disco Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Sufi Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Love Songs</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+       
+      </ul>
+
+    </div>
+    <div class="col">
+      <p style=" font-size: 14px; font-weight:480;">Artists</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>Arijit Singh</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Neha Kakkar</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Honey Singh</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Pawan singh</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">A R Rahman</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Lata Mangeshkar</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Kishore Kumar</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">khesari Lal Yadav</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Sunidhi Chauhan</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Manoj Tiwari</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Mohammed Rafi</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Guru Randhawa</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Justin Bieber</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">BTS</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Rohit Raaz</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+       
+      </ul>
+
+    </div>
+    <div class="col">
+      
+      <div class="col">
+      <p style=" font-size: 14px; font-weight:480;">New Release</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>English Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Hindi Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Punjabi Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Tamil Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Telugu Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Kannada Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Bhojpuri Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Malayalam Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Marathi Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Bengali Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Haryanvi Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Gujarati</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Odia Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Urdu Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Rajasthani Songs</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+       
+      </ul>
+    </div>
+    
+  </div>
+          </div>
+      </div><br><br>
+   <!---grid 2--->  
+
+   <div class="container">
+  <div class="row">
+    <div class="col">
+      
+       <p style=" font-size: 14px; font-weight:480;">Trending Songs</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>Vibe Song</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Hanuman Chalisa</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Mast Maula</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Party All Night</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Manike Mage Hithe Tamil</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Dil Galti Kar Baitha Hai</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Ik Mili Mainu Apsraa</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Baarish Ki Jaaye</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Raataan Lambiyan</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Phoonk Le</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Koi Sehri Babu</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Mainu Nai Pehchaandi</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Jugnu</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Manike Mage Hithe</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Dance Meri Rani</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+        </ul>
+
+    </div>
+    <div class="col">
+      
+
+       <p style=" font-size: 14px; font-weight:480;">Trending Albums</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>Happy Birthday Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Sad Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">PK Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Jersey</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Bunty Aur Babli 2</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Chandigarh Kare Aashiqui</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Pushpa The Rise</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Uppena</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Enemy Tamil</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Shershaah</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Jai Bhim</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Sooryavanshi</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Dhamaka</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Gaming Music</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Atrangi Re</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Maa Sherawali</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+        </ul>
+
+    </div>
+    <div class="col">
+      
+
+       <p style=" font-size: 14px; font-weight:480;">Lyrics</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>Shiva Tandava Lyrics</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Jingle Bells Lyrics</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Dynamite Lyrics</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Memories Lyrics</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Gayatri Mantra</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Lag Ja Gale Lyrics</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Perfect Lyrics</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Hanuman Chalisa Lyrics</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Jana Gana Mana Lyrics</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Ganesh Aarti Lyrics</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Jai Laxmi Mata Aarti</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Laxmi Ji Aarti Lyrics</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+        </ul>
+
+    </div>
+    <div class="col">
+      
+
+      <p style=" font-size: 14px; font-weight:480;">Old Songs</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>Old Hindi Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old English Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Punjabi Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Telugu Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Tamil Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Bhojpuri Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Bengali Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Malayalam Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Kannada Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Marathi Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Gujarati Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Haryanvi Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Urdu Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Assamese Songs</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Old Rajasthani Songs</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+        </ul>
+
+    </div>
+  </div> 
+   <br><br>
+  <!----grid 3 --->
+  <div class="container">
+  <div class="row">
+    <div class="col" style="margin-left:-12px;">
+      
+      <p style=" font-size: 14px; font-weight:480;">Video</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>Waake</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Prada</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Wakhra Swag</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Kalla Sohna Nai</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Tibbeyan Ala Jatt</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Aafat Waapas</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Dheeme Dheeme</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Meri Odhe Naal</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Hawa Banke</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Nain Tere</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">8 Parche</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Chal Oye</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+        </ul>
+
+    </div>
+    <div class="col">
+
+      <p style=" font-size: 14px; font-weight:480;">Podcasts</p>
+      <ul class="list-group" style=" font-size:12px; list-style: none;">
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li>Motivation Podcasts</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">MD Motivation</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">RJ Kartik Motivation</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Dua Lipa: At Your Service</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Choti Si Kahani</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">The Robin Sharma Mastery Sessions</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Purpose With Gaur Gopal Das</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Life Ki Rann Neeti</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Raavn</li></a>
+        <a href="#" style="text-decoration:none; color:#8e8e93;"><li style="margin-top:4px;">Story Podcasts</li></a>
+        <b style="font-weight: 500; margin-top: 4px;"><a href="#" style="text-decoration:none; color:red;">View all</a></b>
+        </ul>
+
+    </div>
+    <div class="col"></div>
+    <div class="col"></div>
+  </div>
+  <br>
+  <br><br><br>
+  <div style="margin-left: -20px;"><hr style=" width: 94.9%;color: gray;"></div>
+  <p style="font-size: 14px; text-align: center; color: #8e8e93;">© Gamma Gaana Ltd. 2022, All Rights Reserved</p>
+  <br>
+
+    
+    
+<!---footer part div close below--->    
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<!---end footer part close--->
+</body>
+</html>
